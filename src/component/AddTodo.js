@@ -18,6 +18,13 @@ class AddTodo extends Component {
   // into the text field.
   handleChange = (event) => {
     this.setState({
+      content: event.target.value,
+      date: Date().toLocaleString('en-US')
+    });
+  };
+
+  dueDate = (event) => {
+    this.setState({
       due: new Date(event).toLocaleDateString()
     });
   };
